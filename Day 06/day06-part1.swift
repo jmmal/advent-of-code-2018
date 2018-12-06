@@ -24,19 +24,6 @@ struct Point {
     var currentDistance: Int = Int.max
 }
 
-func printGrid(_ grid: [[Point]]) {
-    for row in grid {
-        for point in row {
-            if point.owner != nil {
-                print("\(point.owner!.x)\(point.owner!.y)", terminator: " ")
-            } else {
-                print("00", terminator: " ")
-            }
-        }
-        print()
-    }
-}
-
 var input = try String(contentsOfFile: "/Users/josh/Development/advent-of-code-2018/Day 06/day06.playground/Resources/input.txt").trimmingCharacters(in: .newlines).components(separatedBy: .newlines)
 
 let coordinates = input.map { (coordinate) -> Coordinate in
