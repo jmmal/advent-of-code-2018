@@ -12,7 +12,7 @@ class Node {
     }
 }
 
-var input = try String(contentsOfFile: "/Users/josh/Development/advent-of-code-2018/Day 07/day07.playground/Resources/input.txt").trimmingCharacters(in: .newlines).components(separatedBy: .newlines)
+var input = try String(contentsOfFile: "/Users/josh/Development/advent-of-code-2018/Day 07/day07.playground/Pages/part1.xcplaygroundpage/Resources/input.txt").trimmingCharacters(in: .newlines).components(separatedBy: .newlines)
 
 var nodes: [String : Node] = [:]
 
@@ -31,13 +31,8 @@ for step in input {
 
 var visitOrder = ""
 while !nodes.isEmpty {
-    let possibleNodes = nodes.filter { (node) -> Bool in
-        node.value.waitingOnNodes.count == 0
-    }
-
-    let nextNode = possibleNodes.min { (node1, node2) -> Bool in
-        node1.value.stepName < node2.value.stepName
-    }
+    let possibleNodes = nodes.filter { $0.value.waitingOnNodes.count == 0 }
+    let nextNode = possibleNodes.min { $0.value.stepName < $1.value.stepName }
 
     if let nextNode = nextNode?.value {
         visitOrder.append(nextNode.stepName)

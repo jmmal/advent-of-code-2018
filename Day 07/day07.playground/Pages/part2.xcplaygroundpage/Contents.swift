@@ -19,7 +19,7 @@ class Node {
     }
 }
 
-var input = try String(contentsOfFile: "/Users/josh/Library/Autosave Information/day07-part2.playground/Resources/input.txt").trimmingCharacters(in: .newlines).components(separatedBy: .newlines)
+var input = try String(contentsOfFile: "/Users/josh/Development/advent-of-code-2018/Day 07/day07.playground/Pages/part2.xcplaygroundpage/Resources/input.txt").trimmingCharacters(in: .newlines).components(separatedBy: .newlines)
 
 var nodes: [String : Node] = [:]
 
@@ -42,9 +42,8 @@ var nodesInProgress: Set<String> = []
 
 while !nodes.isEmpty {
     // All nodes that could be worked on
-    var sortedNodes = nodes.filter { (node) -> Bool in
-        node.value.waitingOnNodes.count == 0
-        }.keys.sorted(by: { $0 > $1 })
+    let nextNodes = nodes.filter { $0.value.waitingOnNodes.count == 0 }
+    var sortedNodes = nextNodes.keys.sorted(by: { $0 > $1 })
 
     // while there is free workers
     while nodesInProgress.count < totalWorkers && !sortedNodes.isEmpty {
