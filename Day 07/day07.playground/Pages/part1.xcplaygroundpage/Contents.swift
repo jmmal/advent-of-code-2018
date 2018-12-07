@@ -29,16 +29,8 @@ for step in input {
     nodes[arr[1]] = precedingNode
 }
 
-//func printNodeCounts(_ nodes: [String : Node ]) {
-//    nodes.forEach { (node) in
-//        print("\(node.value.stepName), waiting on: \(node.value.waitsOn.count)")
-//    }
-//}
-
 var visitOrder = ""
 while !nodes.isEmpty {
-//    printNodeCounts(nodes)
-
     let possibleNodes = nodes.filter { (node) -> Bool in
         node.value.waitingOnNodes.count == 0
     }
