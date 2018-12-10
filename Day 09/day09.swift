@@ -48,9 +48,7 @@ currentMarble.left = currentMarble
 currentMarble.right = currentMarble
 
 var playerNumber = 0
-
-var playerScores: [ Int : Int ] = [ 0 : 0 ]
-var maxScore = 0
+var playerScores: [ Int : Int ] = [:]
 
 for marbleNumber in 1...lastMarblePoints {
     if marbleNumber % 23 == 0 {
