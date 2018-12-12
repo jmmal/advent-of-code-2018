@@ -48,7 +48,6 @@ for _ in 1...20 {
     plants = temp
     temp = []
 
-    print(String(plants))
     // Part 2: Used to recognise pattern in the plant growth
     //    var sum = 0
     //    if generationNumber % 100 == 0 {
