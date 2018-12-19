@@ -2,14 +2,6 @@
 import Foundation
 
 class Point: Hashable {
-    static func == (lhs: Point, rhs: Point) -> Bool {
-        return lhs.positionX == rhs.positionX && lhs.positionY == rhs.positionY
-    }
-
-    var hashValue: Int {
-        return positionX + 1000 * positionY
-    }
-
     var positionX: Int
     var positionY: Int
     let velocityX: Int
@@ -31,6 +23,14 @@ class Point: Hashable {
 
     func copy() -> Point {
         return Point(positionX, positionY, velocityX, velocityY)
+    }
+
+    static func == (lhs: Point, rhs: Point) -> Bool {
+        return lhs.positionX == rhs.positionX && lhs.positionY == rhs.positionY
+    }
+
+    var hashValue: Int {
+        return positionX + 1000 * positionY
     }
 }
 

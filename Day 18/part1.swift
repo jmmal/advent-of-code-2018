@@ -24,24 +24,6 @@ struct Acre: Hashable {
     static func == (lhs: Acre, rhs: Acre) -> Bool {
         return lhs.row == rhs.row && lhs.col == rhs.col
     }
-
-    var describing: String {
-        return "\(row),\(col)"
-    }
-}
-
-func printLandscape(_ landscape: [Acre : AcreType]) {
-    let maxRow = landscape.max { $0.key.row < $1.key.row }!.key.row
-    let maxCol = landscape.max { $0.key.col < $1.key.col }!.key.col
-
-    for row in 0...maxRow {
-        for col in 0...maxCol {
-            print(landscape[Acre(row, col)]!.rawValue, terminator: "")
-        }
-        print()
-    }
-
-    print()
 }
 
 func getAdjacents(forAcre acre: Acre, inLandscape landscape: [Acre : AcreType]) -> [Acre] {
@@ -72,9 +54,6 @@ for (row, line) in input.enumerated() {
     }
 }
 
-//print("Initial state:")
-//printLandscape(landscape)
-
 for _ in 1...10 {
     var copy: [Acre : AcreType] = landscape
 
@@ -83,8 +62,6 @@ for _ in 1...10 {
 
         let treeCount = adjacents.filter() { copy[$0] == .trees }.count
         let lumberYardCount = adjacents.filter() { copy[$0] == .lumberYard }.count
-
-        //        print("\(acre) - trees: \(treeCount) - lumber: \(lumberYardCount)")
 
         if acreType == .open {
             if treeCount >= 3 {
@@ -109,18 +86,10 @@ for _ in 1...10 {
             }
         }
     }
-
-    //    print("After \(i) minutes:")
-    //    printLandscape(landscape)
 }
-
-printLandscape(landscape)
 
 let woodedCount = landscape.filter { $0.value == .trees }.count
 let lumberYardCount = landscape.filter { $0.value == .lumberYard }.count
-
-print("Wood: \(woodedCount)")
-print("Lumber: \(lumberYardCount)")
 
 print(woodedCount * lumberYardCount)
 
