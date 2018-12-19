@@ -233,7 +233,7 @@ for _ in 1...100 {
 }
 
 // Calculates the sum of prime factors
-// Inspired from Reddit
+// Inspired by Reddit and https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
 var n = registers[5]
 var sum = 1 + n
 
