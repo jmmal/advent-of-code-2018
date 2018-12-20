@@ -23,6 +23,6 @@ This repository is comprised of my solutions for Advent of Code 2018. All soluti
 | [Day 17](https://adventofcode.com/2018/day/17) * | [Part 1](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2017/day17.swift) | [Part 2](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2017/day17.swift) * |
 | [Day 18](https://adventofcode.com/2018/day/18) | [Part 1](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2018/part1.swift) | [Part 2](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2018/part2.swift) |
 | [Day 19](https://adventofcode.com/2018/day/19) | [Part 1](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2019/part1.swift) | [Part 2](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2019/part2.swift) * |
-| [Day 20](https://adventofcode.com/2018/day/20) } [Part 1](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2020/day20.playground/Contents.swift) | [Part 2](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2020/day20.playground/Contents.swift) |
+| [Day 20](https://adventofcode.com/2018/day/20) | [Part 1](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2020/day20.playground/Contents.swift) | [Part 2](https://github.com/jmmal/advent-of-code-2018/blob/master/Day%2020/day20.playground/Contents.swift) |
 
 ` * `  indicates external  help was needed
